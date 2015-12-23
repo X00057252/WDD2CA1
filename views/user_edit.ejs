@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<% include ./partials/sidebar %>
+<div class="wrapper home">
+<p><h4>Here you can change your user profile details:</h4></p>
+<form method="POST" action="/profile/edit" class="user_edit">
+    <% if(typeof changed != 'undefined'){%>
+    <%}%>
+    <div class="user-data">
+        <label for="fname">First name</label>
+        <input type="text" name="fname" placeholder="first name" value="<%=fname%>"><br/>
+    </div>
+    <div class="user-data">
+        <label for="lname">Last name</label>
+        <input type="text" name="lname" placeholder="last name" value="<%=lname%>"><br/>
+    </div>
+    <div class="user-data">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="email" value="<%=email%>" /><br/>
+    </div>
+    <div class="user-data">
+        <label for="address">Address</label>
+        <input type="text" name="address" placeholder="address" value="<%=address%>" /><br/>
+    </div>
+    <div class="user-data">
+        <label for="password">password</label>
+        <input type="password" name="password" placeholder="new password"><br/>
+    </div>
+    <div class="user-data">
+        <input type="submit" value="save details">
+    </div>
+
+
+</form>
+</div>
+
+<% include ./partials/footer %>
+

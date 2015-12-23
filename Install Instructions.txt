@@ -1,0 +1,5 @@
+1. go to website/dbdump directory and run mongorestore
+
+2. go to website directory and run node bin/www
+
+3. open browser at localhost:3000

@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<% include ./partials/sidebar %>
+
+<div class="wrapper">
+    <div id="spottings">Latest reported spottings!</div>
+    <ul class="posts">
+        <% posts.forEach(function(post){ %>
+        <li>
+            <p class="post-title"><%=post.title%></p>
+            <p class="post-by">By <%=post.author%> on <%=post.date.toDateString() + ' '+post.date.toLocaleTimeString()%></p>
+            <span class="post-text"><%=post.post%></span>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+
+<% include ./partials/footer %>
+

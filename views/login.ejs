@@ -1,0 +1,12 @@
+<% include ./partials/header %>
+<% include ./partials/sidebar %>
+
+<p id="login-info">Please sign in for latest info on Santa's movements!</p>
+<form method="POST" action="/profile/login" class="login-form">
+    <input class="field" type="text" name="username" placeholder="username" /><br/>
+    <input class="field" type="password" name="password" placeholder="password" /><br/>
+    <input type="submit" value="login" class="submit-btn"/>
+</form>
+
+<% include ./partials/footer %>
+

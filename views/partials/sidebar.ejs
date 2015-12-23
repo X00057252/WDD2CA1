@@ -1,0 +1,38 @@
+<div class="right sidebar">
+    <div class='spottings-posts'>
+        <div class="sidetitle">
+            <h3>Recent Spottings</h3>
+        </div>
+        <div class="spottings-entries">
+                <% entries.forEach(function(entry){%>
+                    <p>
+                        <span class="spottings-entry-title"><b><%=entry.title%></b></span><br/>
+                        <span class="by">
+                            <span> By: </span>
+                            <span class="spottings-entry-author"><%=entry.author%></span>
+                            <span class="date">on <%=entry.date.toDateString() %></span>
+                        </span>
+                        <br/>
+    
+                        <span><%=entry.post.match(/(\w+ ){10}/)[0]%>...</span>
+                        <br/>
+                        <a href="/spottings/id/<%=entry._id%>">View post</a>
+                    </p>
+                <%})%>
+    
+        </div>  <!-- <<< spottings Entries -->
+    </div>
+    <!-- Social network links-->
+    <div class="sidetitle">
+        <h3>Social Networks</h3>
+    </div>
+    <div class="social-container">
+        <div class="social-message">Please join our secret group via:</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"  target="_blank"> <img alt="Facebook" src="/images/facebook.png"></a>
+            <a href="https://twitter.com/"  target="_blank"> <img alt="Twitter" src="/images/twitter.png"></a>
+            <a href="https://plus.google.com/"  target="_blank"> <img alt="Google+" src="/images/googleplus.png"></a>
+            <a href="https://www.youtube.com/"  target="_blank"> <img alt="Youtube" src="/images/youtube.png"></a>
+        </div>
+    </div>
+</div>
